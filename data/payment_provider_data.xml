@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_provider_pay_later" model="payment.provider">
+        <field name="name">Pagar Luego</field>
+        <field name="code">pay_later</field>
+        <field name="state">enabled</field>
+        <field name="module_id" ref="payment_pay_later.module_id"/>  <!-- Ajusta si necesitas -->
+        <field name="custom_message">Paga después vía link en tu factura. Contacta para opciones.</field>
+    </record>
+</odoo>

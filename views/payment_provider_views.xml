@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_provider_form_inherit" model="ir.ui.view">
+        <field name="name">payment.provider.form.inherit.pay_later</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='credentials']" position="inside">
+                <group string="Pagar Luego Config" attrs="{'invisible': [('code', '!=', 'pay_later')]}">
+                    <field name="custom_message"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
