@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="payment.payment_provider_form"/>
         <field name="arch" type="xml">
             <xpath expr="//page[@name='credentials']/group[@name='provider_credentials']" position="inside">
-                <group string="Pagar Luego Config" attrs="{'invisible': [('code', '!=', 'pay_later')]}">
+                <group string="Pagar Luego Config" invisible="code != 'pay_later'">
                     <field name="custom_message"/>
                 </group>
             </xpath>
